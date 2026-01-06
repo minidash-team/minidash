@@ -24,8 +24,10 @@ jobs:
 
               const body = pull_request.body;
 
+              const message = "아래 기입내용을 작성해주시고 해당 라인을 삭제해주세요.";
+
               // PR 본문(body)이 비어있는 경우 (공백 제외)
-              if (!body || body.trim() === "") {
+              if (!body || body.includes(message)) {
                 try {
                   // 1. PR에 코멘트 추가
                   await github.rest.issues.createComment({
