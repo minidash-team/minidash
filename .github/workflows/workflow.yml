@@ -6,7 +6,7 @@ on: # 워크플로우 실행 트리거
 
 jobs: # 작업에 대한 정의
   check:
-    runs-on: ubuntu-lastest # 우분투 환경
+    runs-on: ubuntu-latest # 우분투 환경
     permissions: # 권한 설정
       pull-requests: write # PR에 쓰기 권한 설정
     steps: # 작업 단계
